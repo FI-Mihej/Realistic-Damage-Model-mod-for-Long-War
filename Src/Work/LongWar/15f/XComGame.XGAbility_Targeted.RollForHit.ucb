@@ -3949,14 +3949,281 @@
 [(94 1b):(0b)]Nothing()
 
 [#Mem Offset: (95 1b)][#Hex Offset: (f9 13)]
-[(95 1b):(04)]Return(
-    [(96 1b):(0b)]Nothing()
+[(95 1b):(06)]Jump(
+    {MemOff}(@to_label(32))
 )
 
-[#Mem Offset: (97 1b)][#Hex Offset: (fb 13)]
-[(97 1b):(53)]EndOfScript()
-
 [#Mem Offset: (98 1b)][#Hex Offset: (fc 13)]
+[(98 1b):(04)]@label(36)Return(
+    [(99 1b):(0b)]Nothing()
+)
+
+[#Mem Offset: (9a 1b)][#Hex Offset: (fe 13)]
+[(9a 1b):(0f)]Let(
+    [(9b 1b):(00)]LocalVariable(
+        {ObjRef}(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+    ), 
+    [(a4 1b):(12)]ClassContext(
+        [(a5 1b):(20)]ObjectConst(
+            {ObjRef}(Class'XComEngine')
+        ), 
+        {MemSize}(2a 00), 
+        {RetValRef}(FloatProperty'XComEngine.SyncFRand.ReturnValue'), 
+        {Byte}("0"), 
+        [(b9 1b):(1c)]FinalFunction(
+            {ObjRef}(Function'XComEngine.SyncFRand'), 
+            [(c2 1b):(a8)]At_StringString(
+                [(c3 1b):(a8)]At_StringString(
+                    [(c4 1b):(38 57)]NameToString(
+                        [(c6 1b):(01)]InstanceVariable(
+                            {ObjRef}(NameProperty'Core.Object.Name')
+                        )
+                    ), 
+                    [(cf 1b):(38 57)]NameToString(
+                        [(d1 1b):(61 1c)]GetStateName(
+                            [(d3 1b):(16)]EndFP()
+                        )
+                    ), 
+                    [(d4 1b):(16)]EndFP()
+                ), 
+                [(d5 1b):(38 57)]NameToString(
+                    [(d7 1b):(1c)]FinalFunction(
+                        {ObjRef}(Function'Core.Object.GetFuncName'), 
+                        [(e0 1b):(16)]EndFP()
+                    )
+                ), 
+                [(e1 1b):(16)]EndFP()
+            ), 
+            [(e2 1b):(16)]EndFP()
+        )
+    )
+)
+
+[#Mem Offset: (e3 1b)][#Hex Offset: (2f 14)]
+[(e3 1b):(07)]@label(32)JumpIfNot(
+    {MemOff}(@to_label(33)), 
+    [(e6 1b):(b2)]LessEqual_FloatFloat(
+        [(e7 1b):(00)]LocalVariable(
+            {ObjRef}(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+        ), 
+        [(f0 1b):(1e)]FloatConst(
+            {Float32}("0.10000000149011612")
+        ), 
+        [(f5 1b):(16)]EndFP()
+    )
+)
+
+[#Mem Offset: (f6 1b)][#Hex Offset: (3e 14)]
+[(f6 1b):(0f)]Let(
+    [(f7 1b):(01)]InstanceVariable(
+        {ObjRef}(IntProperty'XGAbility_Targeted.m_iActualDamage')
+    ), 
+    [(00 1c):(38 44)]FloatToInt(
+        [(02 1c):(ab)]Multiply_FloatFloat(
+            [(03 1c):(38 3f)]IntToFloat(
+                [(05 1c):(01)]InstanceVariable(
+                    {ObjRef}(IntProperty'XGAbility_Targeted.m_iActualDamage')
+                )
+            ), 
+            [(0e 1c):(ab)]Multiply_FloatFloat(
+                [(0f 1c):(ab)]Multiply_FloatFloat(
+                    [(10 1c):(38 3f)]IntToFloat(
+                        [(12 1c):(01)]InstanceVariable(
+                            {ObjRef}(IntProperty'XGAbility_Targeted.m_iHitChance')
+                        )
+                    ), 
+                    [(1b 1c):(1e)]FloatConst(
+                        {Float32}("0.009999999776482582")
+                    ), 
+                    [(20 1c):(16)]EndFP()
+                ), 
+                [(21 1c):(12)]ClassContext(
+                    [(22 1c):(20)]ObjectConst(
+                        {ObjRef}(Class'XComEngine')
+                    ), 
+                    {MemSize}(2a 00), 
+                    {RetValRef}(FloatProperty'XComEngine.SyncFRand.ReturnValue'), 
+                    {Byte}("0"), 
+                    [(36 1c):(1c)]FinalFunction(
+                        {ObjRef}(Function'XComEngine.SyncFRand'), 
+                        [(3f 1c):(a8)]At_StringString(
+                            [(40 1c):(a8)]At_StringString(
+                                [(41 1c):(38 57)]NameToString(
+                                    [(43 1c):(01)]InstanceVariable(
+                                        {ObjRef}(NameProperty'Core.Object.Name')
+                                    )
+                                ), 
+                                [(4c 1c):(38 57)]NameToString(
+                                    [(4e 1c):(61 1c)]GetStateName(
+                                        [(50 1c):(16)]EndFP()
+                                    )
+                                ), 
+                                [(51 1c):(16)]EndFP()
+                            ), 
+                            [(52 1c):(38 57)]NameToString(
+                                [(54 1c):(1c)]FinalFunction(
+                                    {ObjRef}(Function'Core.Object.GetFuncName'), 
+                                    [(5d 1c):(16)]EndFP()
+                                )
+                            ), 
+                            [(5e 1c):(16)]EndFP()
+                        ), 
+                        [(5f 1c):(16)]EndFP()
+                    )
+                ), 
+                [(60 1c):(16)]EndFP()
+            ), 
+            [(61 1c):(16)]EndFP()
+        )
+    )
+)
+
+[#Mem Offset: (62 1c)][#Hex Offset: (8a 14)]
+[(62 1c):(06)]Jump(
+    {MemOff}(@to_label(34))
+)
+
+[#Mem Offset: (65 1c)][#Hex Offset: (8d 14)]
+[(65 1c):(07)]@label(33)JumpIfNot(
+    {MemOff}(@to_label(35)), 
+    [(68 1c):(b1)]Greater_FloatFloat(
+        [(69 1c):(00)]LocalVariable(
+            {ObjRef}(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+        ), 
+        [(72 1c):(1e)]FloatConst(
+            {Float32}("0.8999999761581421")
+        ), 
+        [(77 1c):(16)]EndFP()
+    )
+)
+
+[#Mem Offset: (78 1c)][#Hex Offset: (9c 14)]
+[(78 1c):(0f)]Let(
+    [(79 1c):(01)]InstanceVariable(
+        {ObjRef}(IntProperty'XGAbility_Targeted.m_iActualDamage')
+    ), 
+    [(82 1c):(38 44)]FloatToInt(
+        [(84 1c):(ab)]Multiply_FloatFloat(
+            [(85 1c):(38 3f)]IntToFloat(
+                [(87 1c):(01)]InstanceVariable(
+                    {ObjRef}(IntProperty'XGAbility_Targeted.m_iActualDamage')
+                )
+            ), 
+            [(90 1c):(ae)]Add_FloatFloat(
+                [(91 1c):(ab)]Multiply_FloatFloat(
+                    [(92 1c):(12)]ClassContext(
+                        [(93 1c):(20)]ObjectConst(
+                            {ObjRef}(Class'XComEngine')
+                        ), 
+                        {MemSize}(2a 00), 
+                        {RetValRef}(FloatProperty'XComEngine.SyncFRand.ReturnValue'), 
+                        {Byte}("0"), 
+                        [(a7 1c):(1c)]FinalFunction(
+                            {ObjRef}(Function'XComEngine.SyncFRand'), 
+                            [(b0 1c):(a8)]At_StringString(
+                                [(b1 1c):(a8)]At_StringString(
+                                    [(b2 1c):(38 57)]NameToString(
+                                        [(b4 1c):(01)]InstanceVariable(
+                                            {ObjRef}(NameProperty'Core.Object.Name')
+                                        )
+                                    ), 
+                                    [(bd 1c):(38 57)]NameToString(
+                                        [(bf 1c):(61 1c)]GetStateName(
+                                            [(c1 1c):(16)]EndFP()
+                                        )
+                                    ), 
+                                    [(c2 1c):(16)]EndFP()
+                                ), 
+                                [(c3 1c):(38 57)]NameToString(
+                                    [(c5 1c):(1c)]FinalFunction(
+                                        {ObjRef}(Function'Core.Object.GetFuncName'), 
+                                        [(ce 1c):(16)]EndFP()
+                                    )
+                                ), 
+                                [(cf 1c):(16)]EndFP()
+                            ), 
+                            [(d0 1c):(16)]EndFP()
+                        )
+                    ), 
+                    [(d1 1c):(af)]Subtract_FloatFloat(
+                        [(d2 1c):(1e)]FloatConst(
+                            {Float32}("1.0")
+                        ), 
+                        [(d7 1c):(ab)]Multiply_FloatFloat(
+                            [(d8 1c):(38 3f)]IntToFloat(
+                                [(da 1c):(01)]InstanceVariable(
+                                    {ObjRef}(IntProperty'XGAbility_Targeted.m_iHitChance')
+                                )
+                            ), 
+                            [(e3 1c):(1e)]FloatConst(
+                                {Float32}("0.009999999776482582")
+                            ), 
+                            [(e8 1c):(16)]EndFP()
+                        ), 
+                        [(e9 1c):(16)]EndFP()
+                    ), 
+                    [(ea 1c):(16)]EndFP()
+                ), 
+                [(eb 1c):(ab)]Multiply_FloatFloat(
+                    [(ec 1c):(38 3f)]IntToFloat(
+                        [(ee 1c):(01)]InstanceVariable(
+                            {ObjRef}(IntProperty'XGAbility_Targeted.m_iHitChance')
+                        )
+                    ), 
+                    [(f7 1c):(1e)]FloatConst(
+                        {Float32}("0.009999999776482582")
+                    ), 
+                    [(fc 1c):(16)]EndFP()
+                ), 
+                [(fd 1c):(16)]EndFP()
+            ), 
+            [(fe 1c):(16)]EndFP()
+        )
+    )
+)
+
+[#Mem Offset: (ff 1c)][#Hex Offset: (ff 14)]
+[(ff 1c):(06)]Jump(
+    {MemOff}(@to_label(34))
+)
+
+[#Mem Offset: (02 1d)][#Hex Offset: (02 15)]
+[(02 1d):(0f)]@label(35)Let(
+    [(03 1d):(01)]InstanceVariable(
+        {ObjRef}(IntProperty'XGAbility_Targeted.m_iActualDamage')
+    ), 
+    [(0c 1d):(38 44)]FloatToInt(
+        [(0e 1d):(ab)]Multiply_FloatFloat(
+            [(0f 1d):(38 3f)]IntToFloat(
+                [(11 1d):(01)]InstanceVariable(
+                    {ObjRef}(IntProperty'XGAbility_Targeted.m_iActualDamage')
+                )
+            ), 
+            [(1a 1d):(ab)]Multiply_FloatFloat(
+                [(1b 1d):(38 3f)]IntToFloat(
+                    [(1d 1d):(01)]InstanceVariable(
+                        {ObjRef}(IntProperty'XGAbility_Targeted.m_iHitChance')
+                    )
+                ), 
+                [(26 1d):(1e)]FloatConst(
+                    {Float32}("0.009999999776482582")
+                ), 
+                [(2b 1d):(16)]EndFP()
+            ), 
+            [(2c 1d):(16)]EndFP()
+        )
+    )
+)
+
+[#Mem Offset: (2d 1d)][#Hex Offset: (21 15)]
+[(2d 1d):(06)]@label(34)Jump(
+    {MemOff}(@to_label(36))
+)
+
+[#Mem Offset: (30 1d)][#Hex Offset: (24 15)]
+[(30 1d):(53)]EndOfScript()
+
+[#Mem Offset: (31 1d)][#Hex Offset: (25 15)]
 /*DESCRIPTION_END*/
 
 
@@ -7663,9 +7930,417 @@ Nothing()
 
 Nothing()
 
-Return(
+Jump(
+    (@to_label("Check Is Critical Damage Type"))
+)
+
+@label("Script End Return")Return(
     Nothing()
 )
 
-EndOfScript()
+@label("Check Is Critical Damage Type")JumpIfNot(
+    (@to_label("Choose from Non Crit Damage Types"))), 
+    BoolVariable(
+        InstanceVariable(
+            (BoolProperty'XGAbility_Targeted.m_bCritical')
+        )
+    )
+)
 
+Let(
+    InstanceVariable(
+        (IntProperty'XGAbility_Targeted.m_iActualDamage')
+    ), 
+    FloatToInt(
+		Add_FloatFloat(
+			Multiply_FloatFloat(
+				IntToFloat(
+					InstanceVariable(
+						(IntProperty'XGAbility_Targeted.m_iActualDamage')
+					)
+				), 
+				Multiply_FloatFloat(
+					Multiply_FloatFloat(
+						IntToFloat(
+							InstanceVariable(
+								(IntProperty'XGAbility_Targeted.m_iHitChance')
+							)
+						), 
+						FloatConst(
+							("0.009999999776482582")
+						), 
+						EndFP()
+					), 
+					Add_FloatFloat(
+						Multiply_FloatFloat(
+							Abs(
+								Divide_FloatFloat()
+									Loge(
+										Add_FloatFloat(
+											ClassContext(
+												ObjectConst(
+													(Class'XComEngine')
+												), 
+												(2a 00), 
+												(FloatProperty'XComEngine.SyncFRand.ReturnValue'), 
+												("0"), 
+												FinalFunction(
+													(Function'XComEngine.SyncFRand'), 
+													At_StringString(
+														At_StringString(
+															NameToString(
+																InstanceVariable(
+																	(NameProperty'Core.Object.Name')
+																)
+															), 
+															NameToString(
+																GetStateName(
+																	EndFP()
+																)
+															), 
+															EndFP()
+														), 
+														NameToString(
+															FinalFunction(
+																(Function'Core.Object.GetFuncName'), 
+																EndFP()
+															)
+														), 
+														EndFP()
+													), 
+													EndFP()
+												)
+											),
+											FloatConst(
+												("0.01")
+											), 
+											EndFP()
+										),
+										EndFP()
+									),
+									FloatConst(
+										("-4.60517")
+									), 
+									EndFP()
+								),
+								EndFP()
+							),
+							FloatConst(
+								("0.3")
+							), 
+							EndFP()
+						),
+						FloatConst(
+							("1.0")
+						), 
+						EndFP()
+					),
+					EndFP()
+				), 
+				EndFP()
+			),
+			FloatConst(
+				("0.5")
+			), 
+			EndFP()
+		)
+    )
+)
+
+Jump(
+    (@to_label("If Result Damage is <= 1"))
+)
+
+@label("Choose from Non Crit Damage Types")JumpIfNot(
+    (@to_label("Normal Damage")), 
+    GreaterEqual_FloatFloat(
+		Abs(
+			Divide_FloatFloat()
+				Loge(
+					Add_FloatFloat(
+						ClassContext(
+							ObjectConst(
+								(Class'XComEngine')
+							), 
+							(2a 00), 
+							(FloatProperty'XComEngine.SyncFRand.ReturnValue'), 
+							("0"), 
+							FinalFunction(
+								(Function'XComEngine.SyncFRand'), 
+								At_StringString(
+									At_StringString(
+										NameToString(
+											InstanceVariable(
+												(NameProperty'Core.Object.Name')
+											)
+										), 
+										NameToString(
+											GetStateName(
+												EndFP()
+											)
+										), 
+										EndFP()
+									), 
+									NameToString(
+										FinalFunction(
+											(Function'Core.Object.GetFuncName'), 
+											EndFP()
+										)
+									), 
+									EndFP()
+								), 
+								EndFP()
+							)
+						),
+						FloatConst(
+							("0.01")
+						), 
+						EndFP()
+					),
+					EndFP()
+				),
+				FloatConst(
+					("-4.60517")
+				), 
+				EndFP()
+			),
+			EndFP()
+		),
+        FloatConst(
+            ("0.7")
+        ), 
+        EndFP()
+    )
+)
+
+Let(
+    InstanceVariable(
+        (IntProperty'XGAbility_Targeted.m_iActualDamage')
+    ), 
+    FloatToInt(
+		Add_FloatFloat(
+			Multiply_FloatFloat(
+				IntToFloat(
+					InstanceVariable(
+						(IntProperty'XGAbility_Targeted.m_iActualDamage')
+					)
+				), 
+				Multiply_FloatFloat(
+					Multiply_FloatFloat(
+						IntToFloat(
+							InstanceVariable(
+								(IntProperty'XGAbility_Targeted.m_iHitChance')
+							)
+						), 
+						FloatConst(
+							("0.009999999776482582")
+						), 
+						EndFP()
+					), 
+					Add_FloatFloat(
+						Multiply_FloatFloat(
+							Abs(
+								Divide_FloatFloat()
+									Loge(
+										Add_FloatFloat(
+											ClassContext(
+												ObjectConst(
+													(Class'XComEngine')
+												), 
+												(2a 00), 
+												(FloatProperty'XComEngine.SyncFRand.ReturnValue'), 
+												("0"), 
+												FinalFunction(
+													(Function'XComEngine.SyncFRand'), 
+													At_StringString(
+														At_StringString(
+															NameToString(
+																InstanceVariable(
+																	(NameProperty'Core.Object.Name')
+																)
+															), 
+															NameToString(
+																GetStateName(
+																	EndFP()
+																)
+															), 
+															EndFP()
+														), 
+														NameToString(
+															FinalFunction(
+																(Function'Core.Object.GetFuncName'), 
+																EndFP()
+															)
+														), 
+														EndFP()
+													), 
+													EndFP()
+												)
+											),
+											FloatConst(
+												("0.01")
+											), 
+											EndFP()
+										),
+										EndFP()
+									),
+									FloatConst(
+										("-4.60517")
+									), 
+									EndFP()
+								),
+								EndFP()
+							),
+							FloatConst(
+								("0.3")
+							), 
+							EndFP()
+						),
+						FloatConst(
+							("0.9")
+						), 
+						EndFP()
+					),
+					EndFP()
+				), 
+				EndFP()
+			),
+			FloatConst(
+				("0.5")
+			), 
+			EndFP()
+		)
+    )
+)
+
+Jump(
+    (@to_label("If Result Damage is <= 1"))
+)
+
+@label("Normal Damage")Let(
+    InstanceVariable(
+        (IntProperty'XGAbility_Targeted.m_iActualDamage')
+    ), 
+    FloatToInt(
+		Add_FloatFloat(
+			Multiply_FloatFloat(
+				IntToFloat(
+					InstanceVariable(
+						(IntProperty'XGAbility_Targeted.m_iActualDamage')
+					)
+				), 
+				Multiply_FloatFloat(
+					Multiply_FloatFloat(
+						IntToFloat(
+							InstanceVariable(
+								(IntProperty'XGAbility_Targeted.m_iHitChance')
+							)
+						), 
+						FloatConst(
+							("0.009999999776482582")
+						), 
+						EndFP()
+					), 
+					Add_FloatFloat(
+						Multiply_FloatFloat(
+							Abs(
+								Divide_FloatFloat()
+									Loge(
+										Add_FloatFloat(
+											ClassContext(
+												ObjectConst(
+													(Class'XComEngine')
+												), 
+												(2a 00), 
+												(FloatProperty'XComEngine.SyncFRand.ReturnValue'), 
+												("0"), 
+												FinalFunction(
+													(Function'XComEngine.SyncFRand'), 
+													At_StringString(
+														At_StringString(
+															NameToString(
+																InstanceVariable(
+																	(NameProperty'Core.Object.Name')
+																)
+															), 
+															NameToString(
+																GetStateName(
+																	EndFP()
+																)
+															), 
+															EndFP()
+														), 
+														NameToString(
+															FinalFunction(
+																(Function'Core.Object.GetFuncName'), 
+																EndFP()
+															)
+														), 
+														EndFP()
+													), 
+													EndFP()
+												)
+											),
+											FloatConst(
+												("0.01")
+											), 
+											EndFP()
+										),
+										EndFP()
+									),
+									FloatConst(
+										("-4.60517")
+									), 
+									EndFP()
+								),
+								EndFP()
+							),
+							FloatConst(
+								("0.3")
+							), 
+							EndFP()
+						),
+						FloatConst(
+							("0.9")
+						), 
+						EndFP()
+					),
+					EndFP()
+				), 
+				EndFP()
+			),
+			FloatConst(
+				("0.5")
+			), 
+			EndFP()
+		)
+    )
+)
+
+@label("If Result Damage is <= 1")JumpIfNot(
+    (@to_label("Script End")), 
+    LessEqual_IntInt(
+		InstanceVariable(
+			(IntProperty'XGAbility_Targeted.m_iActualDamage')
+		), 
+        IntConst(
+            ("1")
+        ), 
+        EndFP()
+    )
+)
+
+Let(
+    InstanceVariable(
+        (IntProperty'XGAbility_Targeted.m_iActualDamage')
+    ), 
+	IntConst(
+		("1")
+	)
+)
+
+@label("Script End")Jump(
+    (@to_label("Script End Return"))
+)
+
+EndOfScript()
