@@ -1,0 +1,64 @@
+fRoll = (Exp(float(m_iHitChance) / 27.0) / Exp(100 / 27));
+fRoll = fRoll * 0.01 * 50.0;
+full_accuracy = m_iHitChance + (100 - m_iHitChance) * Exp((FRand() * 100.0) / fRoll) / Exp(max_accuracy / fRoll)
+m_iActualDamage = m_iActualDamage * full_accuracy
+
+
+fRoll = Exp(float(m_iHitChance) / 27.0) / 40.59738695;
+fRoll = fRoll * 0.5;
+
+
+fRoll = Exp(float(m_iHitChance) / 27.0) / 81.1947739;
+m_iActualDamage = m_iActualDamage * ((m_iHitChance + (100 - m_iHitChance) * (Exp((FRand() * 100.0) / fRoll) / Exp(max_accuracy / fRoll))) * 0.01);
+
+fRoll = 
+fDiv(
+	Exp(
+		fDiv(
+			float(
+				m_iHitChance
+			),
+			27.0
+		)
+	),
+	81.1947739
+)
+
+m_iActualDamage = 
+int(
+	fAdd(
+		0.5,
+		fmull(
+			m_iActualDamage,
+			fMull(
+				0.01,
+				fAdd(
+					m_iHitChance,
+					fMull(
+						fSub(
+							100.0,
+							m_iHitChance
+						),
+						dDiv(
+							Exp(
+								fDiv(
+									fMul(
+										FRand(),
+										100.0
+									),
+									fRoll
+								)
+							),
+							Exp(
+								fDiv(
+									100.0,
+									fRoll
+								)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+)
