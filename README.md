@@ -13,6 +13,6 @@ The screenshots show the results of mod work.
 Also, for clarity – there are some charts which show the resulting scatter of hits at a certain precision shot. Each graph is the result of emulation of hundreds of random shots at a fixed precision. The vertical axis for each shot is a percentage of the original damage that the victim will get, if the shot does hit the target.
 
 ## Installation
-Select the appropriate folder from
+Select the appropriate folder from "Release" dir. Then:
 * Use https://github.com/wghost/PatcherGUI or  PatchUPK from https://github.com/wghost/UPKUtils to install mod file from "For PatcherGUI" dir.
 * Use ...[TBA]... to install source file from "UCB Source Code" dir.
