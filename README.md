@@ -16,3 +16,5 @@ Also, for clarity – there are some charts which show the resulting scatter of 
 Select the appropriate folder from "Release" dir. Then:
 * Use https://github.com/wghost/PatcherGUI or  PatchUPK from https://github.com/wghost/UPKUtils to install mod file from "For PatcherGUI" dir.
 * Or use ...[TBA]... to install source file from "UCB Source Code" dir.
+
+UCB source code files can be highlighted by https://github.com/FI-Mihej/UCB-Source-Code-highlighter
