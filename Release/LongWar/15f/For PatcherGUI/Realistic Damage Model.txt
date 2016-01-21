@@ -269,9 +269,8 @@ OBJECT = XGAbility_Targeted.RollForHit : AUTO
 /*(0x1B22/0x13A6)*/ 	19 2E <Class.XComPresentationLayer> 19 2E <Class.XComPlayerController> 19 01 <Engine.Actor.WorldInfo> [@] <Engine.Actor.GetALocalPlayerController.ReturnValue> 00 ( 1C <Engine.Actor.GetALocalPlayerController> 16 ) [@] <XComPlayerController.m_Pres> 00 ( 01 <XComPlayerController.m_Pres> ) [@] <NullRef> 00 ( 1B <MSGOverwatchShot> 17 16 ) 
 /*(0x1B7F/0x13E3)*/ [#label_0x1B7F]
 /*(0x1B7F/0x13E3)*/ 1B <CalcDamage> 16 
-/*(0x1B89/0x13ED)*/ 0B 
-/*(0x1B8A/0x13EE)*/ 0B 
-/*(0x1B8B/0x13EF)*/ 0B 
+/*(0x1B89/0x13ED)*/ 06 [@label_0x1B9A] 
+/*(0x1B8C/0x13F0)*/ [#label_0x1B8C]
 /*(0x1B8C/0x13F0)*/ 0B 
 /*(0x1B8D/0x13F1)*/ 0B 
 /*(0x1B8E/0x13F2)*/ 0B 
@@ -281,8 +280,9 @@ OBJECT = XGAbility_Targeted.RollForHit : AUTO
 /*(0x1B92/0x13F6)*/ 0B 
 /*(0x1B93/0x13F7)*/ 0B 
 /*(0x1B94/0x13F8)*/ 0B 
-/*(0x1B95/0x13F9)*/ 06 [@label_0x1B9A] 
-/*(0x1B98/0x13FC)*/ [#label_0x1B98]
+/*(0x1B95/0x13F9)*/ 0B 
+/*(0x1B96/0x13FA)*/ 0B 
+/*(0x1B97/0x13FB)*/ 0B 
 /*(0x1B98/0x13FC)*/ 04 0B 
 /*(0x1B9A/0x13FE)*/ [#label_0x1B9A]
 /*(0x1B9A/0x13FE)*/ 0F 00 <.fRoll> AC BF AC 38 3F 01 <@m_iHitChance> 1E <%f 27> 16 16 1E <%f 0.405974> 16 
@@ -295,5 +295,5 @@ OBJECT = XGAbility_Targeted.RollForHit : AUTO
 /*(0x1C06/0x1452)*/ [#label_0x1C06]
 /*(0x1C06/0x1452)*/ 0F 00 <.fRoll> AB 00 <.fRoll> 1E <%f 0.5> 16 
 /*(0x1C20/0x1464)*/ 0F 01 <@m_iActualDamage> 38 44 AE 1E <%f 0.5> AB 38 3F 01 <@m_iActualDamage> AB 1E <%f 0.01> AE 38 3F 01 <@m_iHitChance> AB AF 1E <%f 100> 38 3F 01 <@m_iHitChance> 16 AC BF AC AB 1E <%f 100> 12 20 <Class.XComEngine> [@] <XComEngine.SyncFRand.ReturnValue> 00 ( 1C <XComEngine.SyncFRand> A8 A8 38 57 01 <Core.Object.Name> 38 57 61 1C 16 16 38 57 1C <Core.Object.GetFuncName> 16 16 16 ) 16 00 <.fRoll> 16 16 BF AC 1E <%f 100> 00 <.fRoll> 16 16 16 16 16 16 16 16 
-/*(0x1CCF/0x14E7)*/ 06 [@label_0x1B98] 
+/*(0x1CCF/0x14E7)*/ 06 [@label_0x1B8C] 
 /*(0x1CD2/0x14EA)*/ 53 

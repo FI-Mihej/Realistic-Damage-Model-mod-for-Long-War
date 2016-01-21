@@ -7639,35 +7639,35 @@ Context(
     EndFP()
 )
 
-Nothing()
-
-Nothing()
-
-Nothing()
-
-Nothing()
-
-Nothing()
-
-Nothing()
-
-Nothing()
-
-Nothing()
-
-Nothing()
-
-Nothing()
-
-Nothing()
-
-Nothing()
-
 Jump(
     (@to_label("Change m_iActualDamage"))
 )
 
-@label("Script Ret")Return(
+@label("Script Ret")Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Return(
     Nothing()
 )
 
