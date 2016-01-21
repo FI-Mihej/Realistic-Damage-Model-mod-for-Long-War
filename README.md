@@ -10,7 +10,15 @@ This mod is compatible with both the original game and the mod Long War.
 
 The screenshots show the results of mod work.
 
+![Two sucessful hits in a row by wounded muton to soldier](Img/Screenshots/Two%20sucessful%20hits%20in%20a%20row%20by%20wounded%20muton%20to%20soldier.png)
+
 Also, for clarity – there are some charts which show the resulting scatter of hits at a certain precision shot. Each graph is the result of emulation of hundreds of random shots at a fixed precision. The vertical axis for each shot is a percentage of the original damage that the victim will get, if the shot does hit the target.
+
+![10 percent Accuracy](Img/Charts/10%20percent%20Accuracy.png)
+![30 percent Accuracy](Img/Charts/30%20percent%20Accuracy.png)
+![50 percent Accuracy](Img/Charts/50%20percent%20Accuracy.png)
+![70 percent Accuracy](Img/Charts/70%20percent%20Accuracy.png)
+![90 percent Accuracy](Img/Charts/90%20percent%20Accuracy.png)
 
 ## Installation
 Select the appropriate folder from "Release" dir. Then:
