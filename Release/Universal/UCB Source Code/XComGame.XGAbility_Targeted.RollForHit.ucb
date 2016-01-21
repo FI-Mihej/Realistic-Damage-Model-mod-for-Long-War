@@ -1,0 +1,272 @@
+/*DIFF_REPLACE_FROM*/
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Return(
+    Nothing()
+)
+
+/*DIFF_REPLACE_TO*/
+
+Jump(
+    (@to_label("Change m_iActualDamage"))
+)
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+Nothing()
+
+@label("Script Ret")Return(
+    Nothing()
+)
+
+@label("Change m_iActualDamage")Let(
+    LocalVariable(
+        (FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+    ),
+	Divide_FloatFloat(
+		Exp(
+			Divide_FloatFloat(
+				IntToFloat(
+					InstanceVariable(
+						(IntProperty'XGAbility_Targeted.m_iHitChance')
+					)
+				),
+				FloatConst(
+					("27.0")
+				), 
+				EndFP()
+			),
+			EndFP()
+		),
+		FloatConst(
+			("0.4059738695")
+		), 
+		EndFP()
+	)
+)
+
+JumpIfNot(
+    (@to_label("fRoll >= 1")), 
+    Less_FloatFloat(
+		LocalVariable(
+			(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+		),
+		FloatConst(
+			("1.0")
+		), 
+        EndFP()
+    )
+)
+
+Let(
+	LocalVariable(
+		(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+	),
+	FloatConst(
+		("1.0")
+	), 
+)
+
+Jump(
+    (@to_label("fRoll * 0.5"))
+)
+
+@label("fRoll >= 1")JumpIfNot(
+    (@to_label("fRoll * 0.5")), 
+    Greater_FloatFloat(
+		LocalVariable(
+			(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+		),
+		FloatConst(
+			("100.0")
+		), 
+        EndFP()
+    )
+)
+
+Let(
+	LocalVariable(
+		(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+	),
+	FloatConst(
+		("100.0")
+	), 
+)
+
+@label("fRoll * 0.5")Let(
+	LocalVariable(
+		(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+	),
+	Multiply_FloatFloat(
+		LocalVariable(
+			(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+		),
+		FloatConst(
+			("0.5")
+		), 
+		EndFP()
+	), 
+)
+
+Let(
+    InstanceVariable(
+        (IntProperty'XGAbility_Targeted.m_iActualDamage')
+    ), 
+	FloatToInt(
+		Add_FloatFloat(
+			FloatConst(
+				("0.5")
+			), 
+			Multiply_FloatFloat(
+				IntToFloat(
+					InstanceVariable(
+						(IntProperty'XGAbility_Targeted.m_iActualDamage')
+					)
+				),
+				Multiply_FloatFloat(
+					FloatConst(
+						("0.01")
+					), 
+					Add_FloatFloat(
+						IntToFloat(
+							InstanceVariable(
+								(IntProperty'XGAbility_Targeted.m_iHitChance')
+							)
+						),
+						Multiply_FloatFloat(
+							Subtract_FloatFloat(
+								FloatConst(
+									("100.0")
+								), 
+								IntToFloat(
+									InstanceVariable(
+										(IntProperty'XGAbility_Targeted.m_iHitChance')
+									)
+								),
+								EndFP()
+							),
+							Divide_FloatFloat(
+								Exp(
+									Divide_FloatFloat(
+										Multiply_FloatFloat(
+											FloatConst(
+												("100.0")
+											),
+											ClassContext(
+												ObjectConst(
+													(Class'XComEngine')
+												), 
+												(2a 00), 
+												(FloatProperty'XComEngine.SyncFRand.ReturnValue'), 
+												("0"), 
+												FinalFunction(
+													(Function'XComEngine.SyncFRand'), 
+													At_StringString(
+														At_StringString(
+															NameToString(
+																InstanceVariable(
+																	(NameProperty'Core.Object.Name')
+																)
+															), 
+															NameToString(
+																GetStateName(
+																	EndFP()
+																)
+															), 
+															EndFP()
+														), 
+														NameToString(
+															FinalFunction(
+																(Function'Core.Object.GetFuncName'), 
+																EndFP()
+															)
+														), 
+														EndFP()
+													), 
+													EndFP()
+												)
+											),
+											EndFP()
+										),
+										LocalVariable(
+											(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+										),
+										EndFP()
+									),
+									EndFP()
+								),
+								Exp(
+									Divide_FloatFloat(
+										FloatConst(
+											("100.0")
+										), 
+										LocalVariable(
+											(FloatProperty'XGAbility_Targeted.RollForHit.fRoll')
+										),
+										EndFP()
+									),
+									EndFP()
+								),
+								EndFP()
+							),
+							EndFP()
+						),
+						EndFP()
+					),
+					EndFP()
+				),
+				EndFP()
+			),
+			EndFP()
+		)
+	)
+)
+
+Jump(
+    (@to_label("Script Ret"))
+)
+
+/*DIFF_REPLACE_END*/
