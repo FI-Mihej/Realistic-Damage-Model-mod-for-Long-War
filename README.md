@@ -23,6 +23,16 @@ Also, for clarity – there are some charts which show the resulting scatter of 
 ## Installation
 Select the appropriate folder from "Release" dir. Then:
 * Use https://github.com/wghost/PatcherGUI or  PatchUPK from https://github.com/wghost/UPKUtils to install mod file from "For PatcherGUI" dir.
-* Or use ...[TBA]... to install source file from "UCB Source Code" dir.
+* Or use [Bensbach](https://github.com/FI-Mihej/Bensbach) to install source file from "UCB Source Code" dir.
 
 UCB source code files can be highlighted by https://github.com/FI-Mihej/UCB-Source-Code-highlighter
+
+## Made with
+
+[Bensbach](https://github.com/FI-Mihej/Bensbach) compiler.
+
+## License
+
+Copyright © 2016 ButenkoMS. All rights reserved.
+
+Licensed under the Apache License, Version 2.0.
